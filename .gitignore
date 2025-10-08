@@ -1,0 +1,92 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Editors/IDE ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Logs & temp ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tmp
+tmp/
+
+# --- Dependencies & builds ---
+node_modules/
+bower_components/
+dist/
+build/
+out/
+coverage/
+*.coverage
+*.lcov
+
+# --- Env & secrets (NEVER commit secrets) ---
+.env
+.env.*       # .env.local, .env.development, etc.
+*.secret
+*.key
+*.pem
+*.p12
+*.keystore
+serviceAccount*.json
+
+# --- Data files you usually don’t want public ---
+*.sqlite
+*.db
+*.db-journal
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
+venv/
+pip-wheel-metadata/
+.pytest_cache/
+
+# --- Java / Gradle / Maven ---
+target/
+.gradle/
+.classpath
+.project
+.settings/
+*.iml
+
+# --- .NET ---
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Frontend frameworks (React/Vite/Next/etc.) ---
+.next/
+.nuxt/
+.svelte-kit/
+.cache/
+.storybook/
+.pnp.cjs
+.pnp.data.json
+.pnp.loader.mjs
+
+# --- Misc build tools ---
+.parcel-cache/
+.eslintcache
+stylelintcache
+tsbuildinfo
+*.tsbuildinfo
+
+# --- project folders ---
+in/
+out/

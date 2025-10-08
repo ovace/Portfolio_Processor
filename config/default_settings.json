@@ -1,0 +1,42 @@
+{
+  "COLUMN_MAPPING_CONFIG": "config/column_mapping.json",
+  "OUTPUT_DIR": "out",
+  "DEBUG": true,
+  "AUDIT": true,
+  "TIMESTAMP_FORMAT": "%Y%m%d_%H%M%S"
+  ,
+   "INPUT_FILES": [
+    {
+      "path": "E:/Workspaces/WS_Python/Portfoilo/Portfolio/in/ET_10022025.csv",
+      "tabs": null
+    },
+    {
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\ML_10052025.csv",
+      "tabs": null
+    },
+    {
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\ML_10062025.csv",
+      "tabs": null
+    },
+    {
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\CW_100502025.xlsx",
+      "tabs": ["Holdings With No Totals"]
+    }
+  ]
+  ,
+  "OUTPUT_FIELDS": "Broker,Account,Symbol,Quantity,Acquisition Date,Cost per Unit,Total Cost,Value,Type",
+  "BETA_COLUMN": "Beta",
+  "BETA_WEIGHT_COLUMN": "Value",
+  "LOG_DIR": "logs",
+  "METRICS": {
+    "ENABLE": true,
+    "COMPUTE_CAGR_PER_ROW": true,
+    "RETURNS": {
+      "PORTFOLIO_FILE": null,
+      "BENCHMARK_FILE": null,
+      "COLUMN": "return",
+      "PERIODS_PER_YEAR": 252
+    }
+  } 
+
+}

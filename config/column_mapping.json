@@ -1,0 +1,72 @@
+{
+  "Account": [
+    "account",
+    "account number",
+    "acct",
+    "acct no",
+    "acc no",
+    "portfolio",
+    "Account Registration",
+    "Description"
+
+  ],
+  "Symbol": [
+    "symbol",
+    "ticker",
+    "symbol cusip",
+    "stock",
+    "security",
+    "cusip"
+  ],
+  "Quantity": [
+    "quantity",
+    "qty",
+    "shares",
+    "units",
+    "Qty #"
+  ],
+  "Acquisition Date": [
+    "acquisition date",
+    "purchase date",
+    "date acquired",
+    "acquisition",
+    "Date Acquired",
+    "Initial Purchase Date"
+  ],
+  "Cost per Unit": [
+    "cost per unit",
+    "unit cost",
+    "price",
+    "price per share",
+    "cost basis",
+    "cost",
+    "Unit Cost ($)",
+    "Price Paid $",
+    "Unit Principal Cost*"
+  ],
+  "Total Cost": [
+    "total cost",
+    "cost basis total",
+    "total amount",
+    "amount",
+    "Cost Basis ($)",
+    "Total Cost",
+    "Principal ($)*"
+  ],
+  "Value": [
+    "value",
+    "market value",
+    "current value",
+    "fair market value",
+    "value $",
+    "Value ($)"
+  ],
+  "Type": [
+    "type",
+    "investment type",
+    "asset type",
+    "security type",
+    "Fund Category",
+    "Asset Type"
+  ]
+}
