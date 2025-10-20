@@ -1,14 +1,17 @@
 {
   "Account": [
-    "account",
+    "account",    
+    "acct",    
+    "portfolio",
+    "Account Registration",
+    "Description"
+  ],
+  "Account#": [
     "account number",
     "acct",
     "acct no",
     "acc no",
-    "portfolio",
-    "Account Registration",
-    "Description"
-
+	"Account #"
   ],
   "Symbol": [
     "symbol",
