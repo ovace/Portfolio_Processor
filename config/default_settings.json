@@ -7,32 +7,32 @@
   ,
    "INPUT_FILES": [
     {
-      "path": "E:/Workspaces/WS_Python/Portfoilo/Portfolio/in/ET.csv",
+      "path": "E:/Workspaces/WS_Python/Portfoilo/portfolioProcessor/in/ET.csv",
       "tabs": null
     },
     {
-      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\ML_J.csv",
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\ML_J.csv",
       "tabs": null
     },
     {
-      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\ML_O.csv",
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\ML_O.csv",
       "tabs": null
     },
     {
-      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\ML_N.csv",
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\ML_N.csv",
       "tabs": null
     },
     {
-      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\CW.xlsx",
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\CW.xlsx",
       "tabs": ["Holdings With No Totals"]
     },
     {
-      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\Portfolio\\in\\PR_O.xlsx",
+      "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\PR_O.xlsx",
       "tabs": ["Securities"]
     }
   ]
   ,
-  "OUTPUT_FIELDS": "Broker,Account,Account#,Symbol,Quantity,Acquisition Date,Cost per Unit,Total Cost,Value,Type,Source",
+  "OUTPUT_FIELDS": "Broker,Account,Account#,Security Description,Symbol,Quantity,Acquisition Date,Cost per Unit,Total Cost,Value,Type,Source",
   "BETA_COLUMN": "Beta",
   "BETA_WEIGHT_COLUMN": "Value",
   "LOG_DIR": "logs",

@@ -11,7 +11,7 @@
     "acct",
     "acct no",
     "acc no",
-	"Account #"
+	  "Account #"
   ],
   "Symbol": [
     "symbol",
@@ -20,6 +20,9 @@
     "stock",
     "security",
     "cusip"
+  ],
+  "Security Description": [
+    "Security Description"   
   ],
   "Quantity": [
     "quantity",
