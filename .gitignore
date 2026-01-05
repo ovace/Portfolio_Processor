@@ -90,3 +90,5 @@ tsbuildinfo
 # --- project folders ---
 in/
 out/
+out_test/
+logs/

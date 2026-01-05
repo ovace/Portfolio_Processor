@@ -3,8 +3,7 @@
 caller.py — Unified CLI for the PortfolioProcessor project
 
 This single entrypoint consolidates the previous callers:
-  - run_portfolio_processor.py  (extraction/normalization/cleansing)
-  - run_portfolio_metrics.py    (CAGR/Beta metrics)
+  - (unified logic moved to utils/)
 
 It provides one cohesive command line with subcommands and flags to:
   • process portfolio files (CSV/XLS/XLSX),
@@ -100,20 +99,20 @@ def _add_metrics_columns(df: pd.DataFrame, settings: Dict[str, Any]) -> pd.DataF
         initial = total_cost.where(total_cost.notna(), quantity * cpu)
         final_val = _to_num(out.get("Value")) if "Value" in out.columns else pd.Series([pd.NA] * len(out))
 
-        cagr_vals: List[Optional[float]] = []  # type: ignore[name-defined]
-        for iv, fv, yrs in zip(initial.tolist(), final_val.tolist(), years.tolist() if years is not None else [None]*len(out)):
-            if iv is None or pd.isna(iv) or iv <= 0:
-                cagr_vals.append(None)
-                continue
-            if fv is None or pd.isna(fv) or fv <= 0:
-                cagr_vals.append(None)
-                continue
-            if yrs is None or pd.isna(yrs) or yrs <= 0:
-                cagr_vals.append(None)
-                continue
-            cagr_vals.append(calculate_cagr(float(iv), float(fv), float(yrs)))
+        # Vectorized CAGR calculation
+        # Filter masks for validity
+        valid_mask = (initial > 0) & (final_val > 0) & (years > 0)
+        
+        # Initialize with None/NaN
+        out["CAGR"] = pd.NA
+        
+        if valid_mask.any():
+            # (FV / IV) ^ (1/t) - 1
+            growth_ratio = final_value_series = final_val[valid_mask] / initial[valid_mask]
+            exponent = 1.0 / years[valid_mask]
+            out.loc[valid_mask, "CAGR"] = (growth_ratio ** exponent) - 1.0
+            
         out["Years Held"] = years
-        out["CAGR"] = cagr_vals
 
     # --- Portfolio-level Beta (optional, requires returns series files) ---
     returns_cfg = metrics_cfg.get("RETURNS", {}) if isinstance(metrics_cfg.get("RETURNS"), dict) else {}

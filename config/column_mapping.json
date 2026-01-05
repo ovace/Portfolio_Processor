@@ -1,9 +1,10 @@
 {
   "Account": [
-    "account",    
-    "acct",    
+    "account",
+    "acct",
     "portfolio",
     "Account Registration",
+    "Security Description",
     "Description"
   ],
   "Account#": [
@@ -11,7 +12,7 @@
     "acct",
     "acct no",
     "acc no",
-	  "Account #"
+    "Account #"
   ],
   "Symbol": [
     "symbol",
@@ -22,14 +23,16 @@
     "cusip"
   ],
   "Security Description": [
-    "Security Description"   
+    "Security Description",
+    "Description"
   ],
   "Quantity": [
     "quantity",
     "qty",
     "shares",
     "units",
-    "Qty #"
+    "Qty #",
+    "# of Shares / Unit"
   ],
   "Acquisition Date": [
     "acquisition date",
@@ -37,7 +40,8 @@
     "date acquired",
     "acquisition",
     "Date Acquired",
-    "Initial Purchase Date"
+    "Initial Purchase Date",
+    "Date"
   ],
   "Cost per Unit": [
     "cost per unit",
@@ -48,7 +52,8 @@
     "cost",
     "Unit Cost ($)",
     "Price Paid $",
-    "Unit Principal Cost*"
+    "Unit Principal Cost*",
+    "NAV / Unit Value"
   ],
   "Total Cost": [
     "total cost",
@@ -57,7 +62,8 @@
     "amount",
     "Cost Basis ($)",
     "Total Cost",
-    "Principal ($)*"
+    "Principal ($)*",
+    "Activity Amount"
   ],
   "Value": [
     "value",
@@ -65,7 +71,8 @@
     "current value",
     "fair market value",
     "value $",
-    "Value ($)"
+    "Value ($)",
+    "Net Account Value"
   ],
   "Type": [
     "type",
@@ -73,6 +80,7 @@
     "asset type",
     "security type",
     "Fund Category",
-    "Asset Type"
+    "Asset Type",
+    "Investment Activity"
   ]
 }

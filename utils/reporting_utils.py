@@ -103,14 +103,24 @@ class OverallReport:
         originals_union = sorted(list(set().union(*[f.original_columns for f in self.files if f.original_columns])))
         normalized_union = sorted(list(set().union(*[f.normalized_columns for f in self.files if f.normalized_columns])))
         missing_freq: Dict[str, int] = {}
+        row_counts_by_file: Dict[str, int] = {}
+        files_list: List[str] = []
+        tables_by_file: Dict[str, int] = {}
+
         for f in self.files:
+            files_list.append(f.input_path)
+            row_counts_by_file[f.input_path] = f.total_rows_out
+            tables_by_file[f.input_path] = f.tables_detected
             for c in f.missing_canonical:
                 missing_freq[c] = missing_freq.get(c, 0) + 1
 
         return {
             "files_processed": len(self.files),
+            "files_list": files_list,
             "tables_detected_total": total_tables,
+            "tables_by_file": tables_by_file,
             "rows_out_total": total_rows,
+            "row_counts_by_file": row_counts_by_file,
             "rows_after_cleanup_total": total_after_cleanup,
             "rows_removed_blank_total": total_removed_blank,
             "rows_removed_duplicates_total": total_removed_dupes,

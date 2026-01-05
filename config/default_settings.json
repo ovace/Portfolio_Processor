@@ -3,11 +3,10 @@
   "OUTPUT_DIR": "out",
   "DEBUG": true,
   "AUDIT": true,
-  "TIMESTAMP_FORMAT": "%Y%m%d_%H%M%S"
-  ,
-   "INPUT_FILES": [
+  "TIMESTAMP_FORMAT": "%Y%m%d_%H%M%S",
+  "INPUT_FILES": [
     {
-      "path": "E:/Workspaces/WS_Python/Portfoilo/portfolioProcessor/in/ET.csv",
+      "path": "E:/Workspaces/WS_Python/Portfoilo/portfolioProcessor/in/ET_J.csv",
       "tabs": null
     },
     {
@@ -24,27 +23,29 @@
     },
     {
       "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\CW.xlsx",
-      "tabs": ["Holdings With No Totals"]
+      "tabs": [
+        "Holdings With No Totals"
+      ]
     },
     {
       "path": "E:\\Workspaces\\WS_Python\\Portfoilo\\portfolioProcessor\\in\\PR_O.xlsx",
-      "tabs": ["Securities"]
+      "tabs": [
+        "Securities"
+      ]
     }
-  ]
-  ,
+  ],
   "OUTPUT_FIELDS": "Broker,Account,Account#,Security Description,Symbol,Quantity,Acquisition Date,Cost per Unit,Total Cost,Value,Type,Source",
   "BETA_COLUMN": "Beta",
   "BETA_WEIGHT_COLUMN": "Value",
   "LOG_DIR": "logs",
   "METRICS": {
     "ENABLE": true,
-    "COMPUTE_CAGR_PER_ROW": true,
+    "COMPUTE_CAGR_PER_ROW": false,
     "RETURNS": {
       "PORTFOLIO_FILE": null,
       "BENCHMARK_FILE": null,
       "COLUMN": "return",
       "PERIODS_PER_YEAR": 252
     }
-  } 
-
+  }
 }
